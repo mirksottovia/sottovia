@@ -99,7 +99,7 @@ and open the template in the editor.
                 <label for="exampleInputEmail1" class="form-label">
                     Email
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" pattern="[a-z0-9._%+-]+@buonarroti.tn.it" placeholder="nome.cognome@buonarroti.tn.it">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" pattern="[a-z0-9]+.+[a-z0-9]+@buonarroti.tn.it" placeholder="nome.cognome@buonarroti.tn.it" required="">
 
                 <div id="emailHelp" class="form-text">
                     Non condivideremo mai la tua email con nessuno.
@@ -109,7 +109,7 @@ and open the template in the editor.
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Inserisci qui la tua password" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required="">
+               <input name="txtPassword" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required="">
             </div>
 
             <button type="submit" class="btn btn-primary" name="btnSubmit" value="submit">Login</button>

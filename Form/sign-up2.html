@@ -101,7 +101,7 @@ and open the template in the editor.
                     <input name="txtMail" type="email" class="form-control" 
                            id="exampleInputEmail1" aria-describedby="emailHelp" 
                            placeholder="nome.cognome@buonarroti.tn.it" class="form-control"
-                           aria-label="Recipient's username" aria-describedby="basic-addon2"
+                           aria-label="Recipient's email" aria-describedby="basic-addon2"
                            pattern="[a-z0-9]+.+[a-z0-9]+@buonarroti.tn.it" required="">
                 </div>
 
@@ -123,16 +123,17 @@ and open the template in the editor.
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fData">Data di nascita</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtData" placeholder="Data di nascita"  class="form-control" pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}" required=""> 
+                <input class="form-control" type="date" id="fdata" name="txtData" placeholder="Data di nascita"  class="form-control" max="2022-10-11" required=""> 
+                <!--pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}"-->
             </div>
             <div class="mb-3">
                 <label class="form-label" for="fCf">Codice Fiscale</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtFCf" placeholder="Codice Fiscale"  class="form-control" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" required=""> 
+                <input class="form-control" type="text" id="fCf" name="txtFCf" placeholder="Codice Fiscale"  class="form-control" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fIva">Partita IVA</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtIva" placeholder="Partita IVA"  class="form-control" pattern="^[0-9]{11}$" required=""> 
+                <input class="form-control" type="text" id="fIva" name="txtIva" placeholder="Partita IVA"  class="form-control" pattern="^[0-9]{11}$" required=""> 
             </div>
             <br>
             <div>
@@ -148,18 +149,18 @@ and open the template in the editor.
             <br>
             <div class="mb-3">
                 <label class="form-label" for="ffile">File</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtfile" placeholder="NomeFile.extension"  class="form-control" pattern="" > 
+                <input class="form-control" type="text" id="fFile" name="txtfile" placeholder="NomeFile.ext"  class="form-control" pattern="(^[A-Za-z0-9_-]+.+(?i)(jpg|png|docx|pdf|txt|zip|ppt)$)" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fIp">Indirizzo IP</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtIP" placeholder="Indirizzo IP"  class="form-control" pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}↵
+                <input class="form-control" type="text" id="fIp" name="txtIP" placeholder="Indirizzo IP"  class="form-control" pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}↵
                        (?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fDominio">Dominio</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtDominio" placeholder="Dominio"  class="form-control" pattern="" required=""> 
+                <input class="form-control" type="text" id="fDominio" name="txtDominio" placeholder="Dominio"  class="form-control" pattern="http://www.+\+.(it|com|net)$" required=""> 
             </div>
             <br>
 
