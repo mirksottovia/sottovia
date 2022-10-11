@@ -91,7 +91,7 @@ and open the template in the editor.
             <h2 align="center">
                 Registrati al nostro sito per usufruire dei servizi che offriamo ai nostri clienti!
             </h2>
-        </p>
+            </p>
         <br><br>
         <form action="" method="get">
 
@@ -102,7 +102,7 @@ and open the template in the editor.
                            id="exampleInputEmail1" aria-describedby="emailHelp" 
                            placeholder="nome.cognome@buonarroti.tn.it" class="form-control"
                            aria-label="Recipient's email" aria-describedby="basic-addon2"
-                           pattern="[a-z0-9]+.+[a-z0-9]+@buonarroti.tn.it" required="">
+                           pattern="[a-z]*\.[a-z][a-z0-9]*@buonarroti\.tn\.it" required=""> <!-- [a-z][a-z0-9]{1,}\.[a-z][a-z0-9]{1,}@[A-Za-z]\.[a-z]{2,4} -->
                 </div>
 
                 <div id="emailHelp" class="form-text">
@@ -118,13 +118,13 @@ and open the template in the editor.
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fuser">Username</label><br>
-                <input class="form-control" type="text" id="fuser" name="txtFUsername" placeholder="Username"  class="form-control" pattern="^[a-zA-Z0-9]+$" required=""> 
+                <input class="form-control" type="text" id="fuser" name="txtFUsername" placeholder="Username"  class="form-control" pattern="^[a-zA-Z0-9._]+$" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fData">Data di nascita</label><br>
                 <input class="form-control" type="date" id="fdata" name="txtData" placeholder="Data di nascita"  class="form-control" max="2022-10-11" required=""> 
-                <!--pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}"-->
+                <!-- pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}" -->
             </div>
             <div class="mb-3">
                 <label class="form-label" for="fCf">Codice Fiscale</label><br>
@@ -149,22 +149,28 @@ and open the template in the editor.
             <br>
             <div class="mb-3">
                 <label class="form-label" for="ffile">File</label><br>
-                <input class="form-control" type="text" id="fFile" name="txtfile" placeholder="NomeFile.ext"  class="form-control" pattern="[A-Za-z0-9_-]+.+(?i)(jpg|png|docx|pdf|txt|zip|ppt)" required=""> 
+                <input class="form-control" type="text" id="fFile" name="txtfile" placeholder="NomeFile.ext"  class="form-control" pattern="[a-z][a-z0-9]*\.+(jpg|png|docx|pdf|txt|zip|ppt)" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fIp">Indirizzo IP</label><br>
-                <input class="form-control" type="text" id="fIp" name="txtIP" placeholder="Indirizzo IP"  class="form-control" pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}↵
-                       (?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" required=""> 
+                <input class="form-control" type="text" id="fIp" name="txtIP" placeholder="Indirizzo IP"  class="form-control" pattern="(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}↵
+                       (?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" required=""> 
             </div>
             <br>
             <div class="mb-3">
                 <label class="form-label" for="fDominio">Dominio</label><br>
-                <input class="form-control" type="text" id="fDominio" name="txtDominio" placeholder="Dominio"  class="form-control" pattern="http://www.+\+.(it|com|net)$" required=""> 
+                <input class="form-control" type="text" id="fDominio" name="txtDominio" placeholder="Dominio"  class="form-control" pattern="@[a-z][a-z0-9]*\.[a-z]{1,2}.[a-z]{1,2}" required=""> 
             </div>
             <br>
 
-
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Ricordami
+                </label>
+            </div>
+            <br>       
             <button name="btnSubmit" type="submit" class="btn btn-primary" value="Submit">Sign up</button>
             <br><br>
         </form>
