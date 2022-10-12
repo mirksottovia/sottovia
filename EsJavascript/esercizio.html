@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="newjavascript.js"></script>
+        <script>
+
+            function visualizzaMessaggio(messaggio) {
+                window.alert(messaggio);
+            }
+
+            function cambioTestoParagrafo(paragrafo, testo) {
+                document.getElementById(paragrafo).innerHTML = testo;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div>TODO write content</div>
+        <button type="button" onclick="window.alert('ciao')">Cliccami</button>
+        <button type="button" onclick="visualizzaMessaggio('prova')">Cliccami</button>
+        <button type="button" onclick="cambioTestoParagrafo('demo1', 'prova1')">Modifica testo</button>
+        <p id="demo">testo</p>
+        <p id="demo1">testo1</p>
+        <script>
+            //window.alert('ciao!');
+
+            num1 = 10;
+            num2 = 20;
+            document.getElementById("demo").innerHTML = somma(num1, num2);
+            
+            console.log(num1);
+        </script>
+    </body>
+
+</html>
