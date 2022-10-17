@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>Esercizi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+
+        function ingrandisci() {
+            var abc = document.getElementById("demo");
+            var currentSize = parseFloat(abc.style.fontSize);
+            abc.style.fontSize = (currentSize + .2) + "em";
+            
+        }
+
+        function rimpicciolisci() {
+            var abc = document.getElementById("demo");
+            var currentSize = parseFloat(abc.style.fontSize);
+            abc.style.fontSize = (currentSize - .2) + "em";
+        }
+
+    </script>
+
+    <script>
+        function dig(n) {
+            document.form.area.value = document.form.area.value + n
+        }
+        function ris() {
+            var c = document.form.area.value;
+            if (c) {
+                document.form.area.value = eval(c);
+            }
+        }
+        
+        function canc(){
+            document.getElementById("area").value = "";
+        }
+        
+    </script>
+    <body>
+        <h1>Primo Esercizio</h1>
+        <p id="demo" style="font-size:1em">Sottovia Mirco</p>
+        <button type="button" onclick="ingrandisci()">Ingrandisci</button>
+        <button type="button" onclick="rimpicciolisci()">Diminuisci</button>
+
+
+        <h1>Secondo Esercizio</h1>
+        <img width="400" height="250" src="images/image.png" onmouseover="this.width = 700;this.height = 550;" onmouseout="this.width = 400;this.height = 250;">
+
+
+        <h1>Terzo Esercizio</h1>
+
+        <p id="demo"></p>
+
+        <div id="calcolatrice">
+            <form name="form">
+                <input class="area" name="area" value="" placeholder="0">
+                <br><br>
+                <table id="calc">
+                    <div  class="row">
+                        <input type="button" value="7" onclick="dig(7);">
+                        <input type="button" value="8" onclick="dig(8);">
+                        <input type="button" value="9" onclick="dig(9);">
+                        <input type="button" value="/" onclick="dig('/');">
+                    </div>      
+                    <div  class="row">
+                        <input type="button" value="4" onclick="dig(4);">
+                        <input type="button" value="5" onclick="dig(5);">
+                        <input type="button" value="6" onclick="dig(6);">
+                        <input type="button" value="+" onclick="dig('+');">
+                        
+                    </div>      
+                   <div  class="row">
+                        <input type="button" value="1" onclick="dig(1);">
+                        <input type="button" value="2" onclick="dig(2);">
+                        <input type="button" value="3" onclick="dig(3);">
+                        <input type="button" value="-" onclick="dig('-');">
+
+                    </div>  
+                    <div  class="row">
+                        <input type="button" value="0" onclick="dig(0);" >
+                        <input type="button" value="." onclick="dig('.')">
+                        <input type="button" value="=" onclick="ris();">
+                        <input type="button" value="x" onclick="dig('*');">
+                    </div> 
+                    <div  class="row">
+                        <input type="button" value="CANC" onclick="canc();">
+                    </div>
+                </table>
+            </form>
+        </div>
+
+
+
+
+    </body>
+
+</html>
