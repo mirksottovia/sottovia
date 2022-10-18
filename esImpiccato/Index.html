@@ -5,8 +5,8 @@
         <title>Impiccato </title>
         <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
         <meta http-equiv="Content-Language" content="it" />
-        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css"
+        <link href="../bootstrapExample/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../bootstrapExample/assets/dist/css/bootstrap.rtl.min.css"
               integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
 
         <script type="text/javascript">
@@ -19,36 +19,36 @@
             var used_letters = "";
             var wrong_guesses = 0;
 
-            function selectLetter(lett)
+            function selectLetter(lettera)
             {
                 if (can_play === false)
                 {
                     return;
                 }
 
-                if (used_letters.indexOf(lett) !== -1)
+                if (used_letters.indexOf(lettera) !== -1)
                 {
                     return;
                 }
 
-                used_letters += lett;
+                used_letters += lettera;
                 document.game.usedLetters.value = used_letters;
 
-                if (to_guess.indexOf(lett) !== -1)
+                if (to_guess.indexOf(lettera) !== -1)
                 {
                     // correct letter guess
                     pos = 0;
                     temp_mask = display_word;
 
-                    while (to_guess.indexOf(lett, pos) !== -1)
+                    while (to_guess.indexOf(lettera, pos) !== -1)
                     {
-                        pos = to_guess.indexOf(lett, pos);
+                        pos = to_guess.indexOf(lettera, pos);
                         end = pos + 1;
 
                         start_text = temp_mask.substring(0, pos);
                         end_text = temp_mask.substring(end, temp_mask.length);
 
-                        temp_mask = start_text + lett + end_text;
+                        temp_mask = start_text + lettera + end_text;
                         pos = end;
                     }
 
@@ -58,7 +58,8 @@
                     if (display_word.indexOf("*") === -1)
                     {
                         // won
-                        alert("Hai vinto!");
+                        document.getElementById("txtTesto").value = "Hai vinto!";
+                        //alert("Hai vinto!");
                         can_play = false;
                     }
                 } else
@@ -70,7 +71,8 @@
                     if (wrong_guesses === 10)
                     {
                         // lost
-                        alert("Hai perso!");
+                        document.getElementById("txtTesto").value = "Hai perso!";
+                        //alert("Hai perso!");
                         can_play = false;
                     }
                 }
@@ -83,6 +85,7 @@
                 used_letters = "";
                 wrong_guesses = 0;
                 document.hm.src = "hmstart.gif";
+                document.getElementById("txtTesto").value = "";
             }
 
             function selectWord()
@@ -154,7 +157,7 @@
             <a href="javascript:selectLetter('Z');">Z</a></p>
             
             <p><img src="hmstart.gif" height="250" width="150" name="hm"></p>
-
+            <input type="text" id="txtTesto" name="txtTesto"><br><br>
             <a class="btn btn-primary" href="javascript:reset()" role="button">Ricomincia</a>
 
             
@@ -162,3 +165,5 @@
 
     </body>
 </html>
+
+<!-- due numeri da 1 a 5, operazione random scelta dal pc, casella di testo per inserire risultato - punteggio parte da 0, 10 punti ho vinto, -10 perdo, timer di 5 secondi per ogni operazione  esempio 4 + ? = 10-->
